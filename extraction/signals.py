@@ -11,7 +11,7 @@ from extraction.models import UploadedDocument
 def send_email_to_mto_after_upload(sender, instance, created, **kwargs):
     if created:
         subject = 'New Document Uploaded'
-        mto_emails = ["software6@varaluae.com", "software3@varaluae.com"]
+        mto_emails = ["mto1@varaluae.com", "track14@varaluae.com", "track15@varaluae.com"]
         for email in mto_emails:
             email_template = 'extraction/email/document_uploaded_email.html'
             data_extraction_url = reverse_lazy('extraction:create_extraction',

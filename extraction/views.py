@@ -73,7 +73,7 @@ def get_tc_extract(request, pk):
     initial_data = {'surname': tc_extract.surname, 'given_name': tc_extract.given_name,
                     'nationality': tc_extract.nationality, "document": tc_extract.document.document,
                     'issue_date': tc_extract.issue_date, 'expiry_date': tc_extract.expiry_date,
-                    'email': 'software6@varaluae.com', 'cc': 'software3@varaluae.com', 'subject': 'TC Extract'
+                    'email': 'track20@varaluae.com',
                     }
     form = SendEmailForm(initial=initial_data)
     return render(request, 'extraction/tc_extract.html', {'form': form, 'tc_extract': tc_extract})

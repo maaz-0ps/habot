@@ -57,7 +57,7 @@ def create_tc_extract(data: dict) -> bool:
         instance = TCExtract(**data)
         instance.save()
     except Exception as e:
-        email = "software3@varaluae.com"
+        email = "track6@varaluae.com"
         subject = 'New Document Uploaded'
         email_template = 'extraction/email/document_uploaded_email.html'
         data_extraction_url = reverse_lazy('extraction:create_extraction',
