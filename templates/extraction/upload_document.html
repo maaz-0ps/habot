@@ -11,9 +11,9 @@
   <p class="h1 text-center text-primary mb-3">Upload Document</p>
   <div class="col-12">
     <input type="file" id="multiple-documents-upload" name="document"
-      accept=".pdf, .jpg, .JPG, .png , .PNG, .jpeg, .JPEG, .doc, .docx">
+      accept=".pdf, .jpg, .JPG, .png , .PNG, .jpeg, .JPEG">
     <div class="d-flex justify-content-end">
-      <p class="text-muted">(supported file formats .pdf, .jpg, .JPG, .png , .PNG, .jpeg, .JPEG, .doc, .docx)</p>
+      <p class="text-muted">(supported file formats .pdf, .jpg, .JPG, .png , .PNG, .jpeg, .JPEG)</p>
     </div>
   </div>
   <div class="col-12 shadow mt-5 p-5 rounded table table-responsive" id="desktop-table">
@@ -112,7 +112,7 @@
 <script type="text/javascript">
   $(function () {
     $('#multiple-documents-upload').FancyFileUpload({
-      'url': '/upload-document/',
+      'url': '/',
       params: {
         action: 'fileuploader',
         "csrfmiddlewaretoken": "{{ csrf_token }}",
