@@ -20,8 +20,8 @@ When TC is not Valid, email is sent to:
 - track6@varaluae.com
 
 ### How to Run
-Create a `settings.ini` file in `core.settings`.
-Copy the contents of `example.settings.ini` into your `settings.ini` file.
+Create a `settings.ini` file in `core/`.
+Copy the contents of `core/example.settings.ini` into your `settings.ini` file.
 
 
 - Create a virtual environment to install dependencies in and activate it:
