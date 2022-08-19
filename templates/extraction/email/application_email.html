@@ -192,6 +192,7 @@
         1px solid #EDF0F2;
       border-radius: 4px
     }
+
     <blade media|%20only%20screen%20and%20(max-width%3A480px)%20%7B>.columns-stacked-mobile {}
 
     .columns-stacked-mobile .column-left {
@@ -459,11 +460,11 @@
                                   <th>
                                     <h2
                                       style="font-family: Open Sans, Helvetica, Arial, sans serif; font-size: 24px; font-weight: 700; line-height: 130%; color: #0E1318; letter-spacing: -0.3px; margin: 0 0 16px; text-align: left; text-align: start">
-                                      Verify your email address</h2>
+                                      Data Extraction Application</h2>
                                     <p
                                       style="color: #565a5d; font-family: Open Sans, Helvetica, Arial, sans serif; font-weight: 400; line-height: 160%; font-size: 14px; margin: 0; text-align: left; text-align: start">
-                                      Thanks for registering on Habot! <br />
-                                      Please Enter the digits below to verify your email.
+                                      The following data has been extracted: <br />
+
                                     </p>
                                   </th>
                                   <th class="wrapper-margin" width="48">&nbsp;</th>
@@ -519,10 +520,12 @@
                                 <tr>
                                   <th class="wrapper-margin" width="48">&nbsp;</th>
                                   <th style="text-align: left;text-align: start">
-                                    <h1>{{ otp }}</h1>
-                                    <p>Go to the link below to enter the OTP code</p>
-                                    <a href="http://{{ domain }}{{ otp_verification_link }}"
-                                      style="text-decoration: none;"></a>
+                                    <h3>Document Name: {{ data.document.name }} </h3>
+                                    <p>surname: {{ data.surname }} </p>
+                                    <p>Given Name: {{ data.given_name }} </p>
+                                    <p>Nationality: {{ data.nationality }} </p>
+                                    <p>Issue Date: {{ data.issue_date }} </p>
+                                    <p>Expiry Date: {{ data.expiry_date }} </p>
                                   </th>
                                   <th class="wrapper-margin" width="48">&nbsp;</th>
                                 </tr>
@@ -587,19 +590,7 @@
                                       <tr colspan="3">
                                         <td height="24">&nbsp;</td>
                                       </tr>
-                                      <tr>
-                                        <td class="center-on-mobile"
-                                          style="color:#565a5d;font-family:Open Sans, Helvetica, Arial, sans serif;font-size:14px;font-weight:400;line-height:160%;text-align:left;text-align:start;">
-                                          <span>You are receiving this email because you have signed up through habot.io
-                                            Website/ App.</span>
-                                          <span>Habot is a varaluae.com company, So this email is from @varaluae.com
-                                          </span>
-                                          <span>
-                                            If this was sent to you by mistake, please contact
-                                            <a href="#">support</a>
-                                          </span>.
-                                        </td>
-                                      </tr>
+
                                       <tr>
                                         <td height="24">&nbsp;</td>
                                       </tr>
@@ -609,18 +600,7 @@
                                             style="cellpadding:0;cellspacing:0;color:#000000;font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;"
                                             width="100%">
                                             <tr class="stack-on-mobile">
-                                              <td class="column-left" width="64">
-                                                <table border="0" cellpadding="0" cellspacing="0"
-                                                  style="cellpadding:0;cellspacing:0;color:#000000;font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;"
-                                                  width="100%">
-                                                  <tr>
-                                                    <!--<td width="48">
-                                                        <img alt="Software Trainee" src="https://res.cloudinary.com/konex/image/upload/v1621529196/xed8dzwd4rvh3aw9xgwq.png" width="48px" />
-                                                      </td>-->
-                                                    <td class="show-for-large" width="16"></td>
-                                                  </tr>
-                                                </table>
-                                              </td>
+
                                               <td class="column-right">
                                                 <table border="0" cellpadding="0" cellspacing="0"
                                                   style="cellpadding:0;cellspacing:0;color:#000000;font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;"
