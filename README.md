@@ -24,7 +24,7 @@ Create a `settings.ini` file in `core.settings`.
 Copy the contents of `example.settings.ini` into your `settings.ini` file.
 
 
-Create a virtual environment to install dependencies in and activate it:
+- Create a virtual environment to install dependencies in and activate it:
 
 ```sh
 $ pip install virtualenv
@@ -32,7 +32,7 @@ $ virtualenv venv
 $ venv/bin/activate or venv\\Scripts\\activate 
 ```
 
-Then install the dependencies:
+- Then install the dependencies:
 
 ```sh
 (venv)$ pip install -r requirements.txt
@@ -40,17 +40,17 @@ Then install the dependencies:
 Note the `(venv)` in front of the prompt. This indicates that this terminal
 session operates in a virtual environment.
 
-Once `pip` has finished downloading the dependencies:
+- Once `pip` has finished downloading the dependencies:
 ```sh
 (venv)$ cd project
 (venv)$ python manage.py migrate
 (venv)$ python manage.py runserver
 ```
 
-Go to the admin pannel and update the sites to match the production environment domain name.
+- Go to the admin pannel and update the sites to match the production environment domain name.
 
 
-You are all set.
+You are all set. 👏👏
 
 
 
