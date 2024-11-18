@@ -1,0 +1,15 @@
+runtime: python39  # Replace with your desired Python version (e.g., python37)
+
+env: flex  # Optional: Set to 'flex' for Flexible environment
+
+service: your-service-name  # Replace with your desired service name
+
+env_variables:
+  # Add any environment variables your app needs here
+  # For example:
+  # DATABASE_URL: your_database_url
+
+handlers:
+- url: /.*
+  script: main.py  # Replace with the entry point script of your app
+  
