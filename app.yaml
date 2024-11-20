@@ -1,20 +1,9 @@
-runtime: python312 # Specify Python version (e.g., python39 for Python 3.9)
-
-env: standard  # This uses the Standard environment for App Engine
-
-entrypoint: gunicorn -b :$PORT internal_menu_selection.wsgi  # Using gunicorn to serve the app
-
-automatic_scaling:
-  min_instances: 1  # Minimum number of instances
-  max_instances: 10  # Maximum number of instances
-  target_cpu_utilization: 0.65  # CPU target for scaling
+runtime: python39  # Use the Python version suitable for your app
+entrypoint: gunicorn -b :$PORT core.wsgi  # Replace 'core' with the correct Django app module
 
 handlers:
   - url: /static
-    static_dir: static/
+    static_dir: static  # Serve static files from the 'static' folder
 
-  - url: /media
-    static_dir: media/
-
-  - url: /.*  # Catch-all for the remaining URLs
-    script: auto
+  - url: /.*
+    script: auto  # Route all other requests to the app
