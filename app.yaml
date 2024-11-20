@@ -7,3 +7,6 @@ handlers:
 
   - url: /.*
     script: auto  # Route all other requests to the app
+skip_files:
+- "*.log"
+- "tests/data/*"  # Exclude entire directory with test data
