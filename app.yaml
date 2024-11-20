@@ -1,4 +1,4 @@
-runtime: python311 # Specify Python version (e.g., python39 for Python 3.9)
+runtime: python312 # Specify Python version (e.g., python39 for Python 3.9)
 
 env: standard  # This uses the Standard environment for App Engine
 
