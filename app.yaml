@@ -1,12 +1,21 @@
-runtime: python39  # Use the Python version suitable for your app
-entrypoint: gunicorn -b :$PORT core.wsgi  # Replace 'core' with the correct Django app module
+runtime: python39  # Specifies Python 3.9 runtime
+entrypoint: gunicorn -b :$PORT core.wsgi  # Replace 'core' with the correct name of your main app folder containing wsgi.py
 
 handlers:
+  # Serve static files
   - url: /static
-    static_dir: static  # Serve static files from the 'static' folder
+    static_dir: static
 
+  # Route all other requests to the Django application
   - url: /.*
-    script: auto  # Route all other requests to the app
-skip_files:
-- "*.log"
-- "tests/data/*"  # Exclude entire directory with test data
+    script: auto
+
+env_variables:
+  DJANGO_SECRET_KEY: "your-secret-key"  # Replace with your actual Django secret key
+  DJANGO_SETTINGS_MODULE: "core.settings"  # Update 'core' to your actual app module
+  PYTHONUNBUFFERED: "1"
+
+automatic_scaling:
+  target_cpu_utilization: 0.65
+  max_instances: 5
+
