@@ -1,6 +1,10 @@
-runtime: python
+runtime: python311  # Replace with your preferred Python version
 env: flex
-entrypoint: gunicorn -b :$PORT main:app
-runtime_config:
-  operating_system: "ubuntu22"
-  runtime_version: "3.12"
+# ... other App Engine configurations
+# Example using Python 3.11 with pipenv
+jobs:
+  build:
+    steps:
+    - use python/3.11
+    - run: pipenv install
+    - run: pipenv run tests
