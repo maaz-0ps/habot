@@ -7,11 +7,11 @@ service:  my-django-app  # Replace with a unique service name
 
 env_variables:
   # Add environment variables securely (see instructions below)
-  DATABASE_HOST: "34.28.159.132"
-  DATABASE_PORT: "habot"
+  DATABASE_HOST: "34.47.197.70"
+  DATABASE_PORT: "3306"
   DATABASE_NAME: "habot"
   DATABASE_USER: "habot"
-  DATABASE_PASSWORD: "123456"
+  DATABASE_PASSWORD: "Venki2212@"
   # ... other environment variables your app needs
 
 handlers:
