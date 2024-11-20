@@ -16,4 +16,4 @@ env_variables:
 
 handlers:
 - url: /.*
-  script: main.py  # Replace with your application's entry point script
+  script: manage.py  # Replace with your application's entry point script
